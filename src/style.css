@@ -185,4 +185,29 @@ card {
   font-weight: 600;
   background-color: #45a29e;
 }
-#more {display: none;}
+
+section {
+  padding: 20px;
+}
+.more {
+  display: none;
+}
+.post {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: justify;
+  margin: 24px 0;
+  padding-right: 40px;
+  font-size: 18px;
+  line-height: 2;
+}
+.post:not(:last-child) {
+  margin-bottom: 30px;
+}
+button {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  margin-top: 10px !important;
+}
