@@ -19,3 +19,51 @@ $(document).ready(function () {
     }
   });
 });
+
+const numInput = document.getElementById("investment");
+
+numInput.addEventListener("input", () => {
+  const num = parseFloat(numInput.value.replace(/,/g, ""));
+  if (!isNaN(num)) {
+    numInput.value = num.toLocaleString();
+  }
+});
+
+function showVipProfit(event) {
+  event.preventDefault();
+  let input = document.querySelector("#investment");
+  let numWithSep = input.value;
+  let num = parseInt(numWithSep.replaceAll(",", ""));
+  let h2 = document.querySelector("#profit");
+  let profit = num / 4;
+  h2.innerHTML = "It amounts to " + profit.toLocaleString();
+}
+
+let vipButton = document.querySelector("#vip");
+vipButton.addEventListener("click", showVipProfit);
+
+function showInvestorProfit(event) {
+  event.preventDefault();
+  let input = document.querySelector("#investment");
+  let numWithSep = input.value;
+  let num = parseInt(numWithSep.replaceAll(",", ""));
+  let h2 = document.querySelector("#profit");
+  let profit = (num * 4.8) / 100;
+  h2.innerHTML = "It amounts to " + profit.toLocaleString();
+}
+
+let investorButton = document.querySelector("#investor");
+investorButton.addEventListener("click", showInvestorProfit);
+
+function showReferralProfit(event) {
+  event.preventDefault();
+  let input = document.querySelector("#investment");
+  let numWithSep = input.value;
+  let num = parseInt(numWithSep.replaceAll(",", ""));
+  let h2 = document.querySelector("#profit");
+  let profit = (num * 0.5) / 100;
+  h2.innerHTML = "It amounts to " + profit.toLocaleString();
+}
+
+let referralButton = document.querySelector("#referral");
+referralButton.addEventListener("click", showReferralProfit);
