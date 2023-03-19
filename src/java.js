@@ -34,9 +34,9 @@ function showVipProfit(event) {
   let input = document.querySelector("#investment");
   let numWithSep = input.value;
   let num = parseInt(numWithSep.replaceAll(",", ""));
-  let h2 = document.querySelector("#profit");
-  let profit = num / 4;
-  h2.innerHTML = "It amounts to " + profit.toLocaleString();
+  let h3 = document.querySelector("#profit");
+  let profit = (num * 25) / 100;
+  h3.innerHTML = "It amounts to " + profit.toLocaleString();
 }
 
 let vipButton = document.querySelector("#vip");
@@ -47,9 +47,9 @@ function showInvestorProfit(event) {
   let input = document.querySelector("#investment");
   let numWithSep = input.value;
   let num = parseInt(numWithSep.replaceAll(",", ""));
-  let h2 = document.querySelector("#profit");
+  let h3 = document.querySelector("#profit");
   let profit = (num * 4.8) / 100;
-  h2.innerHTML = "It amounts to " + profit.toLocaleString();
+  h3.innerHTML = "It amounts to " + profit.toLocaleString();
 }
 
 let investorButton = document.querySelector("#investor");
@@ -60,9 +60,9 @@ function showReferralProfit(event) {
   let input = document.querySelector("#investment");
   let numWithSep = input.value;
   let num = parseInt(numWithSep.replaceAll(",", ""));
-  let h2 = document.querySelector("#profit");
+  let h3 = document.querySelector("#profit");
   let profit = (num * 0.5) / 100;
-  h2.innerHTML = "It amounts to " + profit.toLocaleString();
+  h3.innerHTML = "It amounts to " + profit.toLocaleString();
 }
 
 let referralButton = document.querySelector("#referral");

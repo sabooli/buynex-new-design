@@ -83,7 +83,7 @@ iframe {
   transition: background 200ms ease, border-color 200ms ease !important;
   box-shadow: var(--box-shadow);
 }
-h2 {
+h2,h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 42px;
 }
