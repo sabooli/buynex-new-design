@@ -183,7 +183,6 @@ card {
 .question {
   font-size: 18px;
   font-weight: 600;
-  background-color: #45a29e;
 }
 
 section {
@@ -210,4 +209,82 @@ button {
   line-height: inherit;
   cursor: pointer;
   margin-top: 10px !important;
+}
+
+.question {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 10px 50px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.answers {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0px 15px;
+  margin: 5px 0;
+  width: 100% !important;
+  line-height: 32px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.answer1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0px 15px;
+  margin: 5px 0;
+  width: 100% !important;
+  line-height: 32px;
+  position: relative;
+}
+.blog {
+  text-decoration: none;
+  color: var(--default-color);
+  font-weight: 600;
+}
+.blog:hover {
+  color: var(--default-color);
+  font-weight: 600;
+}
+.questions:checked ~ .answers {
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 10px;
+  z-index: 5;
+  font-size: 2em;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.questions:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.questions {
+  display: none;
 }
