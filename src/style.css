@@ -83,7 +83,8 @@ iframe {
   transition: background 200ms ease, border-color 200ms ease !important;
   box-shadow: var(--box-shadow);
 }
-h2,h3 {
+h2,
+h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 42px;
 }
@@ -287,13 +288,16 @@ button {
 .questions {
   display: none;
 }
-.amount, .amount:hover, .amount:active {
+.amount,
+.amount:hover,
+.amount:active {
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   padding: 10px 20px;
   border: 0.5px solid #cdd1d6;
 }
-.btn-secondary, .btn-secondary:hover {
+.btn-secondary,
+.btn-secondary:hover {
   background-color: var(--default-color) !important;
   color: #0b0c10 !important;
   border: 0.5 solid var(--default-color) !important;
@@ -308,5 +312,6 @@ button {
 .estimate {
   color: #0b0c10;
   border: 1px solid var(--default-color);
+  border-radius: 2px;
   padding: 15px 30px;
 }
