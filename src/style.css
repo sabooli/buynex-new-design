@@ -285,6 +285,10 @@ button {
   transform: rotate(45deg);
 }
 
+.show {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
 .questions {
   display: none;
 }
