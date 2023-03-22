@@ -107,7 +107,7 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 80px;
-  margin-bottom: -85px;
+  margin-bottom: -90px;
 }
 footer i {
   display: inline-block;
@@ -335,4 +335,12 @@ button {
 .brand {
   margin-bottom: -50px;
   text-decoration: none;
+}
+.hint {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;;
+}
+.coded {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  margin-bottom: -75px;
 }

@@ -67,3 +67,14 @@ function showReferralProfit(event) {
 
 let referralButton = document.querySelector("#referral");
 referralButton.addEventListener("click", showReferralProfit);
+
+function goToSignup() {
+  location.href="signup.html";
+}
+
+let signupButtion = document.querySelector("#join");
+signupButton.addEventListener("click", goToSignup);
+
+document.getElementById("join").onclick = function () {
+  location.href = "signup.html";
+};
