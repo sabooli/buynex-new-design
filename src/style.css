@@ -241,6 +241,9 @@ card {
   .swiper-navBtn{
     display: none;
   }
+  .excite{
+    display: none;
+  }
 }
 .question {
   font-size: 18px;
