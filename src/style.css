@@ -83,6 +83,20 @@ iframe {
   transition: background 200ms ease, border-color 200ms ease !important;
   box-shadow: var(--box-shadow);
 }
+.signup-link {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  border-radius: 50px !important;
+  background: #1f2833 !important;
+  color: #45a29e !important;
+  text-decoration: none !important;
+  font-size: 28px !important;
+  line-height: 22px !important;
+  padding: 20px 40px !important;
+  border: none !important;
+  border: 1px solid #1f2833 !important;
+  transition: background 200ms ease, border-color 200ms ease !important;
+  box-shadow: var(--box-shadow);
+}
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
