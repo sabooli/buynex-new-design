@@ -1,3 +1,17 @@
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  centerSlides: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
@@ -24,7 +38,6 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
-
 $(document).ready(function () {
   $(".read").click(function () {
     $(this).prev().toggle();
