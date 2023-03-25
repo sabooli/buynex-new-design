@@ -306,6 +306,10 @@ card {
   .main {
     margin-top: 0;
   }
+  .section-separator {
+    height: 20px;
+    margin: 10px 0;
+  }
 }
 .question {
   font-size: 18px;
