@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-  background-color: #ecf3f3;
+  background-color: #e3f1f1;
   position: fixed !important;
   height: 12%;
   top: 0;
@@ -36,17 +36,17 @@ body {
 }
 .main {
   margin-top: -27px;
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 .wrapper,
 .slide {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .slide .image {
   width: 100%;
-  height: 90%;
+  height: auto;
 }
 .slide {
   overflow: hidden;
@@ -62,7 +62,7 @@ body {
   border-radius: 50%;
 }
 .nav-btn:hover {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 .nav-btn::before,
 .nav-btn::after {
@@ -101,7 +101,6 @@ p {
   font-size: 18px;
   line-height: 2;
 }
-
 .decoration iframe {
   margin: 30px 0 5px 0;
   border-radius: 12px;
@@ -252,22 +251,22 @@ card {
   font-size: 16px;
   color: #fff;
   padding: 8px 16px;
-  background-color: #4070f4;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button:hover {
-  background: #265df2;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .swiper-navBtn {
-  color: #6e93f7;
+  color: rgba(0, 0, 0, 0.3) !important;
   transition: color 0.3s ease;
 }
 .swiper-navBtn:hover {
-  color: #4070f4;
+  color: rgba(0, 0, 0, 0.4) !important;
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after {
@@ -280,11 +279,11 @@ card {
   left: 0;
 }
 .swiper-pagination-bullet {
-  background-color: #6e93f7;
+  background-color: rgba(255, 255, 255, 0.3) !important;
   opacity: 1;
 }
 .swiper-pagination-bullet-active {
-  background-color: #4070f4;
+  background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -302,6 +301,9 @@ card {
   }
   .swiper-pagination-bullet {
     visibility: visible;
+  }
+  .main {
+    margin-top: 0;
   }
 }
 .question {
