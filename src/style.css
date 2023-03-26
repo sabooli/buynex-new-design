@@ -57,13 +57,13 @@ body {
   z-index: 10;
 }
 .nav-btn {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.3);
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 .nav-btn:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 .nav-btn::before,
 .nav-btn::after {
@@ -467,6 +467,24 @@ button {
 }
 .sign {
   background-color: #1f2833 !important;
+}
+.invalid input {
+  border-color: #d93025;
+}
+.field .error-text {
+  display: inline;
+  display: flex;
+  align-items: center;
+  color: #d93025;
+  font-size: 13px;
+  margin-left: 6px;
+  margin-top: 6px;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
+  display: none;
+}
+.invalid .error-text {
+  display: flex;
 }
 .brand {
   margin-bottom: -50px;

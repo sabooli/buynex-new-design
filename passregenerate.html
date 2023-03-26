@@ -29,15 +29,19 @@
               ><img src="src/logo2.png" class="logo brand" alt="Logo"
             /></a> Password
           </h3>
-          <form>
-            <div class="form-outline mb-4">
+          <form id="form">
+            <div class="field email-field mb-4" id="email-field"> 
+              <div class="form-outline">
               <input
                 type="email"
-                id="form3Example3"
-                class="form-control"
-                placeholder="Email address"
+                class="form-control email"
+                placeholder="Email address" id="email" autocomplete="off"
               />
             </div>
+             <span class="error email-error">
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
             <button type="submit" class="btn btn-secondary btn-block mb-4">
               Submit
             </button>
@@ -48,4 +52,23 @@
         </div>
     </div>
   </body>
+  <script>
+    let form = document.querySelector("#form");
+let emailField = form.querySelector("#email-field");
+let emailInput = emailField.querySelector("#email");
+
+function checkEmail() {
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailInput.value.match(emailPattern)) {
+    return emailField.classList.add("invalid");
+  }
+  emailField.classList.remove("invalid");
+}
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  checkEmail();
+
+  emailInput.addEventListener("keyup", checkEmail);
+});
+  </script>
 </html>

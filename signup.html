@@ -12,60 +12,81 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/swiper-bundle.min.css" />
     <script
       src="https://kit.fontawesome.com/d22e6c9494.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body class="sign">
-   
+  <body class="sign"> 
   <div class="gol">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-9">
           <h2 class="fw-bold mb-5">Join <a href="index.html"><img src="src/logo2.png" class="logo brand ps-1" alt=""></a></h2>
-          <form>
+          <form action="#" id="form">
             <div class="form-outline mb-4">
               <input
                 type="full name"
-                id="form3Example3"
                 class="form-control"
                 placeholder="Full name"
+                autocomplete="off"
               />
             </div>
-            <div class="form-outline mb-4">
+            <div class="field email-field mb-4" id="email-field"> 
+              <div class="form-outline">
               <input
                 type="email"
-                id="form3Example3"
-                class="form-control"
-                placeholder="Email address"
+                class="form-control email"
+                placeholder="Email address" id="email" autocomplete="off"
               />
             </div>
-            <div class="form-outline mb-4">
+             <span class="error email-error">
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+        <div class="field number-field mb-4" id="number-field"> 
+               <div class="form-outline ">
               <input
                 type="phone number"
-                id="form3Example3"
-                class="form-control"
-                placeholder="Phone number"
+                class="form-control number"
+                placeholder="Phone number" id="number" autocomplete="off"
               />
             </div>
+             <span class="error number-error">
+            <p class="error-text">Please enter a valid number</p>
+          </span>
+        </div>
             <div class="form-outline mb-4">
               <input
                 type="referral code"
-                id="form3Example3"
                 class="form-control"
-                placeholder="Referral code (if you have)"
+                placeholder="Referral code (if you have)" autocomplete="off"
               />
             </div>
-
-            <div class="form-outline mb-4">
+            <div class="field create-password mb-4" id="create-password"> 
+            <div class="form-outline password">
               <input
                 type="password"
-                id="form3Example4"
-                class="form-control"
-                placeholder="Password"
+                class="form-control password"
+                placeholder="Create Password (6 or more characters)" id="password" autocomplete="off"
               />
             </div>
+            <span class="error password-error">
+            <p class="error-text">Please enter atleast 6 characters</p>
+          </span>
+        </div>
+           <div class="field confirm-password mb-4" id="confirm-password"> 
+             <div class="form-outline cPassword">
+              <input
+                type="password"
+                class="form-control cPassword"
+                placeholder="Confirm Password" id="cPassword" autocomplete="off"
+              />
+            </div>
+             <span class="error cPassword-error">
+            <p class="error-text">Password doesn't match</p>
+          </span>
+        </div>
 
             <div class="row mb-4">
               <div class="col-lg-6 d-flex justify-content-left ps-4 mt-3">
@@ -82,11 +103,66 @@
                   </label>
                 </div>
               </div>
-            <button type="submit" class="btn btn-secondary btn-block mb-4">
+            <button type="submit" class="btn btn-secondary btn-block mb-4" id="#submit">
               Sign up
             </button>
           </form>
         </div>
       </div>
       </div>
-</body>
+    </body>
+    <script>
+  let form = document.querySelector("#form");
+let emailField = form.querySelector("#email-field");
+let emailInput = emailField.querySelector("#email");
+let passField = form.querySelector("#create-password");
+let passInput = passField.querySelector("#password");
+let cPassField = form.querySelector("#confirm-password");
+let cPassInput = cPassField.querySelector("#cPassword");
+let numberField = form.querySelector("#number-field");
+let numberInput = numberField.querySelector("#number");
+
+function createPass() {
+  if (passInput.value.length < 6) {
+    passField.classList.add("invalid");
+  } else {
+    passField.classList.remove("invalid");
+  }
+  console.log(passField.classList);
+}
+
+function confirmPass() {
+  if (passInput.value !== cPassInput.value || cPassInput === "") {
+    return cPassField.classList.add("invalid");
+  }
+  cPassField.classList.remove("invalid");
+}
+
+function checkNumber() {
+  const numberPattern = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  if (!numberInput.value.match(numberPattern)) {
+    return numberField.classList.add("invalid");
+  }
+  emailField.classList.remove("invalid");
+}
+
+function checkEmail() {
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailInput.value.match(emailPattern)) {
+    return emailField.classList.add("invalid");
+  }
+  emailField.classList.remove("invalid");
+}
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  checkEmail();
+  createPass();
+  confirmPass();
+
+  emailInput.addEventListener("keyup", checkEmail);
+  passInput.addEventListener("keyup", createPass);
+  cPassInput.addEventListener("keyup", confirmPass);
+  numberInput.addEventListener("keyup", checkNumber)
+});
+</script>
+  </html>
