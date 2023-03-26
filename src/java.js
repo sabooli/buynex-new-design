@@ -65,7 +65,7 @@ function showVipProfit(event) {
   let numWithSep = input.value;
   let num = parseInt(numWithSep.replaceAll(",", ""));
   let h3 = document.querySelector("#profit");
-  let profit = (num * 25) / 100;
+  let profit = (num * 0.25) / 100;
   h3.innerHTML = "It amounts to " + profit.toLocaleString();
 }
 
