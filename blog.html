@@ -208,13 +208,25 @@ wallets. If you think that it is your right to enjoy a great but stable monthly 
               </footer>
                   <div class="mt-5 pt-5 text-center coded"> This page was coded by <a href="mailto:saba_sabetti@outlook.com">Saba Sabetti</a> and is partly <a href="github.com/sabooli/
 buynex-new-design">open-sourced</a></div>
-    </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="src/java.js"></script>
-  <script src="src/swiper-bundle.min.js"></script>
+<script src="src/swiper-bundle.min.js"></script>
+  <script src="src/java.js"></script>  
    <script
       src="https://kit.fontawesome.com/d22e6c9494.js"
       crossorigin="anonymous"
     ></script>
-</body></html>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="403477c5-f1d2-4a1c-8c74-5e971494a376";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script>
+$(document).ready(function () {
+  $(".read").click(function () {
+    $(this).prev().toggle();
+    $(this).siblings(".dots").toggle();
+    if ($(this).text() == "Read more") {
+      $(this).text("Read less");
+    } else {
+      $(this).text("Read more");
+    }
+  });
+});</script>
+  </body></html>
