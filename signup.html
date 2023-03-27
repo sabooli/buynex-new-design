@@ -16,7 +16,6 @@
       src="https://kit.fontawesome.com/d22e6c9494.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="sign"> 
   <div class="gol">
@@ -98,17 +97,16 @@
         </div>
       </div>
       </div>
-    </body>
+      </body>
     <script>
-  let form = document.querySelector("#form");
+
+let form = document.querySelector("#form");
 let emailField = form.querySelector("#email-field");
 let emailInput = emailField.querySelector("#email");
 let passField = form.querySelector("#create-password");
 let passInput = passField.querySelector("#password");
 let cPassField = form.querySelector("#confirm-password");
 let cPassInput = cPassField.querySelector("#cPassword");
-let numberField = form.querySelector("#number-field");
-let numberInput = numberField.querySelector("#number");
 
 function createPass() {
   if (passInput.value.length < 6) {
@@ -116,7 +114,6 @@ function createPass() {
   } else {
     passField.classList.remove("invalid");
   }
-  console.log(passField.classList);
 }
 
 function confirmPass() {
@@ -142,7 +139,6 @@ form.addEventListener("submit", (event) => {
   emailInput.addEventListener("keyup", checkEmail);
   passInput.addEventListener("keyup", createPass);
   cPassInput.addEventListener("keyup", confirmPass);
-  numberInput.addEventListener("keyup", checkNumber)
 });
 </script>
   </html>
