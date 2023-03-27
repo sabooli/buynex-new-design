@@ -10,7 +10,6 @@ body {
   font-size: 14px;
   font-family: var(--default-font-family);
 }
-
 .navbar {
   background-color: #e3f1f1;
   position: fixed !important;
@@ -25,14 +24,22 @@ body {
   font-weight: 600 !important;
   font-size: 18px !important;
 }
-
+.nav-item {
+  position: relative;
+}
+.show {
+  background-color: #e3f1f1;
+  width: 100%;
+  opacity: 95%;
+}
 .logo {
   width: 172px;
   height: auto;
   margin-bottom: -50px;
+  display: inline-block;
 }
 .active {
-  border: 0.5px dashed #45a29e;
+  border: 0.5px solid #45a29e;
   border-radius: 0px;
 }
 .main {
@@ -310,6 +317,9 @@ card {
     height: 20px;
     margin: 10px 0;
   }
+  .active {
+    display: none;
+  }
 }
 .question {
   font-size: 18px;
@@ -415,8 +425,7 @@ button {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
-.show {
+.showing {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
