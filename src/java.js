@@ -97,12 +97,3 @@ function showReferralProfit(event) {
 
 let referralButton = document.querySelector("#referral");
 referralButton.addEventListener("click", showReferralProfit);
-
-function goToSignup() {
-  alert("Hello!");
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  let signupButton = document.querySelector("#signup-btn");
-  signupButton.addEventListener("click", goToSignup);
-});
