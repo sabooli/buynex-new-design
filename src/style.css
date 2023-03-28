@@ -327,7 +327,7 @@ card {
   .navbar-toggler {
     margin-right: 20px;
   }
-  .logo {
+  .navbar .logo {
     margin-left: -20px;
   }
 }
