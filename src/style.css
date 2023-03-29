@@ -519,3 +519,15 @@ button {
   font-size: 14px;
   margin-bottom: -75px;
 }
+.error {
+  background-color: #ee5449 !important;
+  color: #0b0c10;
+}
+.sad {
+  font-size: 96px;
+  font-weight: 900;
+}
+.home, .home:hover {
+  color: #166360;
+  font-weight: 600;
+}
