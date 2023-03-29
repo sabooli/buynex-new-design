@@ -520,7 +520,7 @@ button {
   margin-bottom: -75px;
 }
 .error {
-  background-color: #ee5449 !important;
+  background-color: #f09089 !important;
   color: #0b0c10;
 }
 .sad {
@@ -528,7 +528,7 @@ button {
   font-weight: 900;
 }
 .home, .home:hover {
-  color: #166360;
+  color: #1e7571;
   font-weight: 600;
 }
 .checked {
