@@ -531,3 +531,8 @@ button {
   color: #166360;
   font-weight: 600;
 }
+.checked {
+  font-size: 72px;
+  font-weight: 400 !important;
+  color: var(--default-color);
+}
