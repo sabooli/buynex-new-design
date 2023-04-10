@@ -15,6 +15,18 @@
      <link rel="stylesheet" href="src/swiper-bundle.min.css" />
    </head>
   <body>
+    <div class="banner">
+      <div class="banner__content">
+        <div class="banner__text text-center">
+<strong class="note ms-5">Did you know? </strong>  <span class="message">It's a new message It's a new new messageIt's a new messageIt's a new messageIt's a new message</span> 
+        </div>
+        <button class="close" id="close">
+          <span>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </button>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand ms-5 me-5" href="/"
             ><img src="src/logo2.png" class="logo" alt="Logo"
@@ -409,6 +421,13 @@ Less than a year.</div>
               </footer>  
     </div> 
     <div class="mt-5 pt-5 text-center coded">2022-2023 Buynex. All rights reserved</div>
+    <script>
+      function closeBanner() {
+  this.closest(".banner").style.display ="none";
+}
+let closeButton = document.querySelector("#close");
+closeButton.addEventListener("click", closeBanner);
+    </script>
 <script src="src/swiper-bundle.min.js"></script>
   <script src="src/java.js"></script>  
    <script

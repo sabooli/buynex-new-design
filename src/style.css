@@ -10,6 +10,36 @@ body {
   font-size: 14px;
   font-family: var(--default-font-family);
 }
+.banner {
+  background-color: var(--default-color);
+  margin-top: -30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+.banner__content {
+  font-size: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.banner__text {
+  color: #ffffff;
+  flex-grow: 1;
+  line-height: 1.4;
+  font-family: "Quicksand", sans-serif;
+}
+.note {
+  padding-right: 10px;
+}
+.close {
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 0;
+}
 .navbar {
   background-color: #e3f1f1;
   position: fixed !important;
@@ -324,7 +354,7 @@ card {
     margin-right: 0;
     padding: 0;
   }
-  
+
   .navbar-toggler {
     margin-right: 20px;
   }
@@ -527,7 +557,8 @@ button {
   font-size: 96px;
   font-weight: 900;
 }
-.home, .home:hover {
+.home,
+.home:hover {
   color: #1e7571;
   font-weight: 600;
 }

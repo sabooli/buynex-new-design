@@ -50,6 +50,7 @@ $(document).ready(function () {
   });
 });
 
+
 const numInput = document.getElementById("investment");
 
 numInput.addEventListener("input", () => {
