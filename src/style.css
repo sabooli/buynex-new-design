@@ -361,6 +361,9 @@ card {
   nav .logo {
     margin-left: -20px;
   }
+  .banner {
+    padding: 55px 10px 10px 10px;
+  }
 }
 .question {
   font-size: 18px;
