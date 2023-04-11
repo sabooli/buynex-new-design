@@ -355,7 +355,7 @@ card {
     padding: 0;
   }
   .navbar {
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
   }
   .navbar-toggler {
     margin-right: 20px;
